@@ -11,10 +11,14 @@ namespace Cellule_Mutante_
         Panel pnl_main;
         Button btn_simulation;
         Cell cell;
+        Timer MyTimer;
         
         public Cellule_Mutante()
         {
             cell = new Cell();
+            MyTimer = new Timer();
+            MyTimer.Interval = (600);
+            MyTimer.Tick += new EventHandler(UpdateCell);
             InitializeComponent();
             // Initialisation d’un Panel en utilisant notre classe
             pnl_main = new MainPanel();
@@ -48,6 +52,14 @@ namespace Cellule_Mutante_
         private void btn_simulation_Click(object sender, EventArgs e)
         {
             MessageBox.Show("La simulation commence");
+            MyTimer.Start(); 
+        }
+        private void UpdateCell(object sender, EventArgs e)
+        {
+            // instruction pour faire muter la cellule
+            // AJOUTER LA BONNE INSTRUCTION ICI
+            //Mise à jour de l’affichage
+            this.Refresh();
         }
 
     }
