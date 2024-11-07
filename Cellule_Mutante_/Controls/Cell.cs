@@ -7,7 +7,8 @@ namespace Cellule_Mutante_
         public int size;
         public Color color;
         private Random rnd = new Random();
-        public Cell()
+        public string genetic;
+        public Cell(int size, Color color, string genetic)
         {
             size = 10;
             color = Color.Black;
@@ -17,5 +18,18 @@ namespace Cellule_Mutante_
             size += 5;
             color = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
         }
+        public override string ToString()
+        {
+            return base.ToString(); 
+        }
+        public string UpdateSize()
+        {
+            return size.ToString();
+        }
+        public void UpdateColor()
+        {
+
+        }
+
     }
 }

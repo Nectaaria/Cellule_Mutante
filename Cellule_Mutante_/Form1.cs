@@ -57,7 +57,8 @@ namespace Cellule_Mutante_
         private void UpdateCell(object sender, EventArgs e)
         {
             // instruction pour faire muter la cellule
-            // AJOUTER LA BONNE INSTRUCTION ICI
+            UpdateColor();
+            UpdateSize();
             //Mise à jour de l’affichage
             this.Refresh();
         }
