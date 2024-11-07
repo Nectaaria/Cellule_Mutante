@@ -41,8 +41,8 @@ namespace Cellule_Mutante_
         {
             var g = e.Graphics;
             g.Clear(pnl_main.BackColor);
-            SolidBrush coloredBrush = new SolidBrush(Color.Black);
-            g.FillEllipse(coloredBrush, pnl_main.Width / 2, pnl_main.Width / 2, 10, 10);
+            SolidBrush coloredBrush = new SolidBrush(cell.color);
+            g.FillEllipse(coloredBrush, pnl_main.Width / 2 - cell.size / 2, pnl_main.Width / 2 - cell.size / 2, cell.size, cell.size);
             g.Dispose();
         }
         private void btn_simulation_Click(object sender, EventArgs e)

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Cell.cs" />
     <Compile Include="Controls\MainPanel.cs">
       <SubType>Component</SubType>
     </Compile>
