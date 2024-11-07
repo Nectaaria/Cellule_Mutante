@@ -15,7 +15,7 @@ namespace Cellule_Mutante_
         
         public Cellule_Mutante()
         {
-            cell = new Cell();
+            cell = new Cell(10,Color.Black,"T");
             MyTimer = new Timer();
             MyTimer.Interval = (600);
             MyTimer.Tick += new EventHandler(UpdateCell);
@@ -57,8 +57,8 @@ namespace Cellule_Mutante_
         private void UpdateCell(object sender, EventArgs e)
         {
             // instruction pour faire muter la cellule
-            UpdateColor();
-            UpdateSize();
+            cell.UpdateColor();
+            cell.UpdateSize();
             //Mise à jour de l’affichage
             this.Refresh();
         }
