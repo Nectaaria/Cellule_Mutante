@@ -12,6 +12,8 @@ namespace Cellule_Mutante_.Controls
             Anchor = AnchorStyles.None;
             Size = new Size(300, 300);
             Dock = DockStyle.None;
+
         }
+
     }
 }
