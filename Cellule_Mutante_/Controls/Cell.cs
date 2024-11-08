@@ -61,7 +61,10 @@ namespace Cellule_Mutante_
         }
         public override string ToString()
         {
-            return base.ToString(); 
+            string toString = base.ToString();
+            toString += String.Format("Génétique = {0}\n", this.genetic);
+            toString += String.Format("Taille = {0}\n", this.size);
+            return toString; 
         }
         public string UpdateSize()
         {
@@ -79,8 +82,6 @@ namespace Cellule_Mutante_
             int nbACT = Regex.Matches(genetic, Regex.Escape("ACT")).Count;
             int nbGTC = Regex.Matches(genetic, Regex.Escape("GTC")).Count;
             int nbGAA = Regex.Matches(genetic, Regex.Escape("GAA")).Count;
-            Debug.Print(nbTGT + " " + nbATT + " " + nbCTC + " " + nbACT + " " + nbGTC + " " + nbGAA);
-            Debug.Print(genetic);
             if (nbTGT > nbATT && nbTGT>nbCTC && nbTGT >nbACT && nbTGT > nbGTC && nbTGT >nbGAA)
             {
                 color = Color.Black;
