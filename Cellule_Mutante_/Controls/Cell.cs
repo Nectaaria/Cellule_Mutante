@@ -20,8 +20,6 @@ namespace Cellule_Mutante_
         }
         public void Mutation()
         {
-            size += 5;
-            color = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
             string genetik = genetic;
             foreach (var character in genetic)
             {
